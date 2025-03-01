@@ -1,0 +1,68 @@
+body {
+  background-color: #ecf0f1;
+}
+.logo {
+  color: #ecf0f1;
+  font-size: larger;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+.homesec {
+  margin: 1px;
+  padding: 1px;
+  border: 1px;
+  border-radius: 24px;
+}
+
+.itemsec {
+  margin: 1px;
+  padding: 1px;
+}
+
+.about {
+  margin: 1px;
+  padding: 1px;
+  border: 1px;
+
+  background: #34495e;
+}
+
+section div h1 {
+  text-align: center;
+  margin: 1px;
+  padding: 1px;
+}
+section div p {
+  padding: 5px;
+  margin: 5px;
+  font-size: 13pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+section div div {
+  padding: 3px;
+  margin: 3px;
+  font-size: 13pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contactform {
+  position: relative;
+  justify-self: center;
+  width: 60%;
+  top: 10em;
+}
+
+.foot{
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 1px;
+  padding: 1px;
+  text-align: center;
+  background-color: black;
+}

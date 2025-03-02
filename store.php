@@ -9,7 +9,9 @@
 </head>
 <body>
   
-    <?php include 'func/header.php'; ?>
+    <?php include 'func/header.php'; 
+    require 'func/functions.php';
+    require 'conf/dbconf.php';?>
   
     
 

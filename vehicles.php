@@ -1,17 +1,28 @@
 
 <?php
 
-require_once 'func/functions.php';
-require_once 'conf/dbconf.php';
+// require 'func/functions.php';
+// require 'conf/dbconf.php';
 
 if(isset($_GET['submit'])){
-    $price = $_GET['Price'];
-    filterByPrice($price,$connect);
-    
+    if(isset($_GET['Price'])){ 
+        $price = $_GET['Price'];     
+        if(isset($_GET['fuel'])){
+            $fuel = $_GET['fuel'];
+            filterByPriceAndFuel($fuel,$price,$connect);
+            
+        }else{
+            filterByPrice($_GET['Price'],$connect);
+        }
+    }elseif(isset($_GET['fuel'])){
+        $fuel = $_GET['fuel'];
+        filterByFuelType($_GET['fuel'],$connect);
+    }else{
+        getAllItems($connect);
+    }
+}   
 
-}else{
-    getAllItems($connect);
-}
+
 
 
 ?>

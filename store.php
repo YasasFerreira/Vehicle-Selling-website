@@ -18,7 +18,7 @@
         <div class="col-8">
           <?php
        
-           include_once 'func/functions.php';
+           require_once 'func/functions.php';
            require_once 'conf/dbconf.php';
 
           getAllItems($connect);

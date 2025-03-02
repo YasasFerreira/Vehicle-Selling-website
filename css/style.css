@@ -16,8 +16,11 @@ body {
 }
 
 .itemsec {
-  margin: 1px;
-  padding: 1px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  
+  
 }
 
 .about {

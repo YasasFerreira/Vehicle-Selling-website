@@ -18,17 +18,34 @@
     </section>
 
     <section class="itemsec" id="item">
-        
+        <div class="row" style="margin: 1em;padding:1em;">
+           <b><center><h3>VEHICLES</h3></center></b>
+           <br>
+        </div>
+        <div class="row">
+            <?php include 'func/item.php'; ?>   
+            <center>
+                 <a href="store.php" class="btn btn-secondary" style="width: 30%; ">SEE MORE>></a>
+            </center>    
+        </div>    
     </section>
 
     <section  id="aboutus">
+        <br>
+        <div class="row">
         <div class="about">
-            <?php include 'func/about.php'; ?>
+            
+                <?php include 'func/about.php'; ?>
+            </div>
+            
         </div>
     </section>
     
     <section class='foot'>
-        <?php include_once 'func/footer.php'; ?>
+        
+            <?php include_once 'func/footer.php'; ?>
+
+        
     </section>
     
 </body>

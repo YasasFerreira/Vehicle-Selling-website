@@ -17,7 +17,7 @@
                             <a class='nav-link' href='index.php#home' style='color: #E5E7EB; font-family: \"Times New Roman\", Times, serif;'>HOME</a>
                         </li>
                         <li class='nav-item' style='margin:0.5em'>
-                            <a class='nav-link' href='store.php' style='color: #E5E7EB; font-family: \"Times New Roman\", Times, serif;'>STORE</a>
+                            <a class='nav-link' href='index.php#item' style='color: #E5E7EB; font-family: \"Times New Roman\", Times, serif;'>STORE</a>
                         </li>
                         <li class='nav-item' style='margin:0.5em'>
                             <a class='nav-link' href='index.php#aboutus' style='color: #E5E7EB; font-family: \"Times New Roman\", Times, serif;'>ABOUT US</a>

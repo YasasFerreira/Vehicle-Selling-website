@@ -9,10 +9,12 @@
             $row = mysqli_fetch_assoc($result);
             
             echo '
-            <div class="card float-start" style="width: 12rem; margin: 5px;padding : 5px;">
+            <div class="card float-start" style="width: 20rem;">
                 <img class="card-img-top img-thumbnail" src="'.$row["image"].'" class="card-img-top" alt="" height="5em">
                 <div class="card-body">
-                    <p class="card-text">Price:</p>
+                    <h5 class="card-text">'.$row["model"].'</h5>
+                    <p class="card-text">Price:$'.$row["price"].'</p>
+                    <p class="card-text">'.$row["description"].'</p>
                     
                     <form action="" method="get">
                     <input type="submit" class="btn btn-secondary" >

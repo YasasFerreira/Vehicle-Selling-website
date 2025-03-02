@@ -1,5 +1,7 @@
 body {
   background-color: #ecf0f1;
+  margin: 2px;
+  padding: 2px;
 }
 .logo {
   color: #ecf0f1;
@@ -18,16 +20,13 @@ body {
 .itemsec {
   margin: 10px;
   padding: 10px;
-  border: 1px solid black;
-  
-  
+  border: 1px ;
 }
 
 .about {
   margin: 1px;
   padding: 1px;
   border: 1px;
-
   background: #34495e;
 }
 
@@ -68,4 +67,9 @@ section div div {
   padding: 1px;
   text-align: center;
   background-color: black;
+}
+
+
+label{
+  text-align: left;
 }

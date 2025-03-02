@@ -8,27 +8,28 @@
     <title>vehicle Store</title>
 </head>
 <body>
-    <?php //include 'func/header.php'; ?>
+  
+    <?php include 'func/header.php'; ?>
+  
+    
 
     <section>
+      <div class="row">
         <div class="row align-items-start">
-        <div class="col-4">
-        
+          <div class="col-4" style="padding: 5em;">
+            <?php 
+              include 'filter.php';
+            ?>
+          </div>
+          <div class="col">
+            <br><br><br>
+            
+            <?php
+              include 'vehicles.php';
+            ?>
+          </div>
         </div>
-        <div class="col-8">
-          <?php
-       
-           require_once 'func/functions.php';
-           require_once 'conf/dbconf.php';
-
-          getAllItems($connect);
-        
-          
-        ?>
-        
-
         </div>
-      </div>
         
  
 

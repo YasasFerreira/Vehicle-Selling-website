@@ -1,6 +1,7 @@
 <?php
 
      echo "
+    <div class='row'>
     <div class='fixed-top'>
         <nav class='navbar navbar-expand-lg navbar-light bg-light'>
             <div class='container-fluid' style='background-color:#111827'>
@@ -36,6 +37,7 @@
                 </div>
             </div>
         </nav>
+    </div>
     </div>";
 
 

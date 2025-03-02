@@ -8,7 +8,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
+    <div class="row">
+        <?php include 'func/header.php'; ?>
+    </div>
+    
     <div>
         <div class="login">
             
@@ -18,6 +21,21 @@
                 <div >
                     <label class="lb" for="username">Fullname</label>
                     <input type="text" class="form-control" name="fullname" placeholder="Enter your full name" required/>
+                </div>
+                <br>
+                <div >
+                    <label class="lb" for="username">Email</label>
+                    <input type="text" class="form-control" name="email" placeholder="Enter your email" required/>
+                </div>
+                <br>
+                <div >
+                    <label class="lb" for="username">Phone No</label>
+                    <input type="text" class="form-control" name="phoneno" placeholder="Enter your phone no" required/>
+                </div>
+                <br>
+                <div >
+                    <label class="lb" for="username">Address</label>
+                    <input type="text" class="form-control" name="address" rows="3" placeholder="Enter your address" required/>
                 </div>
                 <br>
                 <div >
@@ -38,14 +56,14 @@
                 
 
                 <div class="d-grid gap-2 col-4 mx-auto">
-                    <input type="submit" name="submit" value="CREATE ACCOUNT" class=" btn btn-primary">
+                    <input type="submit" name="submit" value="CREATE ACCOUNT" class=" btn btn-secondary">
                 </div>
                 <br><center><label class="lb" for="signup"><a href="signup.php">Already have a account!</a></label></center>
                 
 
             </form>
         
-        	<?php include_once 'signupfunc.php';?>
+        	<?php include_once 'func/signupfunc.php';?>
             <br>
         </div>
     </div>

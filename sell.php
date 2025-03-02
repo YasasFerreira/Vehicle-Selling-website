@@ -6,7 +6,17 @@
     <title>Sell</title>
 </head>
 <body>
+    <?php
+    session_start();
+
+    if(isset($_SESSION['fname'])){
+        
+    }else{
+        header("location:login.php");
+    }
+
     
+?>
     
 
 

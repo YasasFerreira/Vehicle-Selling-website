@@ -77,3 +77,26 @@ label{
 p{
   font-size: 13pt;
 }
+
+.login{
+    position: relative;
+    justify-self: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 50%; 
+}
+.alert{
+    position: relative;
+    justify-self: center;
+    width: 80%;
+    height: 4em;
+    border: 1pt red solid; 
+    background-color: pink;
+    text-align: center;
+}
+.lb{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}

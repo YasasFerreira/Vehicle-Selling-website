@@ -5,7 +5,7 @@
         <img src="images/img1.jpg" class="d-block w-100" alt="..." />
         <div class="carousel-caption d-none d-md-block">
             <div
-            class="content text-and text-bg-secondary p-3 bg-opacity-25 bg-body-tertiary"
+            class="content text-and text-bg-secondary p-3 bg-opacity-50 bg-body-tertiary"
             >
             <h1
                 style="

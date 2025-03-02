@@ -30,7 +30,7 @@
                             <a class='nav-link' href='sell.php' style='color: #E5E7EB; font-family: \"Times New Roman\", Times, serif;'>SELL VEHICLE</a>
                         </li>
                         <li class='nav-item' style='margin:0.5em'>
-                            <a href='' class='btn btn-secondary' style='color: #E5E7EB; font-family: \"Times New Roman\", Times, serif;'>LOGIN/SIGNUP</a>
+                            <a href='login.php' class='btn btn-secondary' style='color: #E5E7EB; font-family: \"Times New Roman\", Times, serif;'>LOGIN/SIGNUP</a>
                         </li>
                         
                     </ul>

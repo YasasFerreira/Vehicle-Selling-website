@@ -10,9 +10,12 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($connect,$sql);
 
     if(mysqli_num_rows($result)==1){
-        header('location:store.php');
+        
         $row = mysqli_fetch_assoc($result);
-        $_SESSION['fname'] = $row['fullname'];
+        $_SESSION['fname'] = $row['full_name'];
+        $_SESSION['id'] = $row['user_id'];
+        header('location:index.php');
+
         
 
     }else{

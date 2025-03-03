@@ -90,3 +90,10 @@ INSERT INTO vehicles (seller_id, make, model, year, price, mileage, fuel_type, t
 (1, 'Rolls-Royce', 'Phantom', 2021, 450000.00, 5000, 'Petrol', 'Automatic', 'Ultra-luxury sedan with unmatched comfort.', 'uploads/vehicle5.jpg', 'available'),
 (2, 'Cadillac', 'Escalade', 2020, 80000.00, 25000, 'Petrol', 'Automatic', 'Premium full-size SUV with cutting-edge tech.', 'uploads/vehicle1.jpg', 'available'),
 (3, 'Land Rover', 'Range Rover', 2021, 95000.00, 15000, 'Diesel', 'Automatic', 'Luxury SUV with all-terrain capability.', 'uploads/vehicle12.jpg', 'available');
+
+
+create table contactdetails (msg_id int primary key auto_increment,
+name varchar(100) not null,
+email varchar(100) not null,
+message varchar(350) not null,
+created_at timestamp default current_timestamp);

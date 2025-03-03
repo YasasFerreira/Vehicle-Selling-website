@@ -16,7 +16,7 @@
             $result = mysqli_query($connect,$sql1);
 
             if(mysqli_num_rows($result) == 0){
-                $sql2 = "INSERT INTO Users (username,password,fullname,email,phone_number,address) VALUES ('$uname','$pword','$fname','$email','$phone','$address')";
+                $sql2 = "INSERT INTO Users (username,password,full_name,email,phone_number,address) VALUES ('$uname','$pword','$fname','$email','$phone','$address')";
                 $result = mysqli_query($connect,$sql2);
                 header('location:login.php');
             }else{

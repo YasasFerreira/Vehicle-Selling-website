@@ -8,9 +8,15 @@
     <title>contactus</title>
 </head>
 <body>
-    <?php include 'func/header.php'; ?>
-    <section>
-        <form action=" " method="post" class="contactform">
+    <div class="row" style="padding:1.5em;margin:1.5em;">
+        <?php include 'func/header.php'; 
+        require_once 'conf/dbconf.php'; 
+        ?>
+    </div>
+    
+    <div class="login">
+    
+        <form action=" " method="post" style="color: black;margin:2em;padding:2em;">
     
         <div class="mb-3">
         <center><h5>Contact Us</h5></center>
@@ -30,8 +36,27 @@
         </div>
     
     </form>
+    </div>
 
-    </section>
+    <?php
+    
+        if(isset($_POST['submit'])){
+            $name = $_POST['name'];
+            $email =$_POST['email'];
+            $msg = $_POST['message'];
+
+            $sql = "INSERT INTO contactdetails (name,email,message) VALUES ('$name','$email','$msg')";
+            $result = mysqli_query($connect,$sql);
+            echo "
+                <script>
+                    alert('message sent successfully');
+                </script>
+            ";
+        }
+    
+    ?>
+
+  
     
 
       
@@ -39,3 +64,4 @@
 <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
+

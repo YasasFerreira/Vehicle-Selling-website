@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div class="row">
+    <div class="row" style="padding-bottom: 5em;">
         <?php include 'func/header.php'; ?>
     </div>
     
@@ -58,7 +58,7 @@
                 <div class="d-grid gap-2 col-4 mx-auto">
                     <input type="submit" name="submit" value="CREATE ACCOUNT" class=" btn btn-secondary">
                 </div>
-                <br><center><label class="lb" for="signup"><a href="signup.php">Already have a account!</a></label></center>
+                <br><center><label class="lb" for="signup"><a href="login.php">Already have a account!</a></label></center>
                 
 
             </form>

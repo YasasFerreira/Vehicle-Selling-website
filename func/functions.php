@@ -18,7 +18,7 @@
                     <p class="card-text" style="font-size:12pt;">'.$row["description"].'</p>
                     <p class="card-text" style="font-size:12pt;">Fuel Type:'.$row["fuel_type"].'</p>
                     
-                    <p class="card-text" style="font-size:12pt;">Transmission:'.$row["transmission"].'</p>
+                    <p class="card-text" style="font-size:11.3pt;">Transmission:'.$row["transmission"].'</p>
                     <p class="card-text" style="font-size:12pt;">Status:'.$row["status"].'</p>
                     
                     <form action="" method="get">
@@ -76,7 +76,7 @@
         
         for($i=0;$i<$numrows;$i++){
             $row = mysqli_fetch_assoc($result);
-            echo "<option value='M".($i+1)."'>".$row['make_name']."</option>";
+            echo "<option value='".($i+1)."'>".$row['make_name']."</option>";
         }
 
     }
@@ -123,4 +123,53 @@
             
    }
 
+   function getVehicleDetails($id,$connect){
+        $sql1 = "SELECT * FROM vehicles WHERE vehicle_id = $id ";
+        $result1 = mysqli_query($connect,$sql1);
+        $row1 = mysqli_fetch_assoc($result1);
+
+        $sellerid = $row1['seller_id'];
+        $sql2 = "SELECT * FROM users WHERE user_id = $sellerid";
+        $result2 = mysqli_query($connect,$sql2);
+        $row2 = mysqli_fetch_assoc($result2);
+
+        echo '
+
+            <div class="row">
+                <div class="col" style = "padding:3em ; margin:3em;">
+                <div class="card float-start">
+                <img class="card-img-top img-thumbnail" src="'.$row1["image"].'" class="card-img-top" alt="" height="3em">
+                <div class="card-body" style="font-size:13pt;">
+                    <h5 class="card-text">'.$row1["model"].'</h5>
+                    <p class="card-text" style="font-size:12pt;">Price:$'.$row1["price"].'</p>
+                    <p class="card-text" style="font-size:12pt;">'.$row1["description"].'</p>
+                    <p class="card-text" style="font-size:12pt;">Fuel Type:'.$row1["fuel_type"].'</p>
+                    <p class="card-text" style="font-size:11.3pt;">Transmission:'.$row1["transmission"].'</p>
+                    <p class="card-text" style="font-size:12pt;">Status:'.$row1["status"].'</p>
+                    
+                    
+                    
+                </div>
+            </div>
+                
+                </div>
+                <div class="col" style = "padding:3em;margin:3em">
+                    <div class="card float-start" style="width:18em;">
+                    <img class="card-img-top img-thumbnail" src="images/user.png" class="card-img-top" alt="" height="3em">
+                        <div class="card-body" style="font-size:13pt;">
+                            <h5 class="card-text">'.$row2["full_name"].'</h5>
+                            <p class="card-text" style="font-size:12pt;">Conatact no : '.$row2["phone_number"].'</p>
+                            <p class="card-text" style="font-size:12pt;">Email : '.$row2["email"].'</p>
+                            <p class="card-text" style="font-size:12pt;">Location:'.$row2["address"].'</p>
+                    
+                </div>
+                
+                </div>
+
+            </div>
+        
+        
+        ';
+
+   }
 ?>

@@ -8,7 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
+    <div class="row" style="padding-bottom: 5em;">
+        <?php include 'func/header.php'; ?>
+    </div>
     <div>
         <div class="login">
             

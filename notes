@@ -97,3 +97,6 @@ name varchar(100) not null,
 email varchar(100) not null,
 message varchar(350) not null,
 created_at timestamp default current_timestamp);
+
+INSERT INTO vehicles (seller_id, make_id, model, year, price, mileage, fuel_type, transmission, description, image, status) VALUES
+(, 'Toyota', 'Camry', 2020, 22000.00, 35000, 'Petrol', 'Automatic', 'Well-maintained sedan with excellent fuel efficiency.', 'uploads/vehicle1.jpg', 'available');

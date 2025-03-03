@@ -26,7 +26,7 @@
 ?>
     <div class="login">
     
-        <form action=" " method="GET" style="color: black;margin:2em;padding:2em;">
+        <form action=" " method="POST" enctype="multipart/form-data" style="color: black;margin:2em;padding:2em;">
     
         
         <center><h4>SELL VEHICLE</h4></center><br><br>
@@ -95,7 +95,7 @@
         <br><br>
       
         <div class="d-grid gap-2 col-6 mx-auto">
-        <input class="form-control" type="submit" value="Confirm" name="submit" style="background-color:#2c3e50;font: bold;color: black;border: 1em;">
+        <input class="form-control" type="submit" name="submit" style="background-color:#2c3e50;font: bold;color: black;border: 1em;">
         </div>
     
     </form>
@@ -103,27 +103,35 @@
 
     <?php
     try {
-
-        if(isset($_GET['submit']) && isset($_SESSION['id'])){
-            $model = $_GET['model'];
-            $year = $_GET['year'];
-            $price = $_GET['price'];
-            $millege = $_GET['millage'];
-            $fuel = $_GET['fuel'];
-            $transmission = $_GET['transmission'];
-            $make = $_GET['make'];
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if(isset($_POST['submit']) && isset($_SESSION['id'])){
+            $model = $_POST['model'];
+            $year = $_POST['year'];
+            $price = $_POST['price'];
+            $millege = $_POST['millage'];
+            $fuel = $_POST['fuel'];
+            $description = $_POST['description'];
+            $transmission = $_POST['transmission'];
+            $make = $_POST['make'];
             $userid = $_SESSION['id'];
+            $image = $_FILES['image'];
+            $imagename = $_FILES['image']['name'];
+            $imagedestination = 'uploads/'.$imagename;
+            $imagetmpname = $_FILES['image']['tmp_name'];
+            move_uploaded_file($imagetmpname,$imagedestination);
+            
+            $sql = "INSERT INTO vehicles (seller_id, make_id, model, year, price, mileage, fuel_type, transmission, description, image, status) VALUES
+            ($userid,$make, '$model', $year, $price, $millege, '$fuel', '$transmission', '$description', '$imagedestination', 'available')";
 
-
-            echo $make;
-            echo $userid;
+            $result = mysqli_query($connect,$sql);
+            
             
 
         }
+    }  
         
+    } catch (Exception $e) {
         
-    } catch (\Throwable $th) {
-        //throw $th;
     }
     
         

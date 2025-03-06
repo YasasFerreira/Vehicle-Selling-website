@@ -5,7 +5,7 @@
     <div class='fixed-top'>
         <nav class='navbar navbar-expand-lg navbar-light bg-light'>
             <div class='container-fluid' style='background-color:#111827'>
-                <div class='logo'>SELL ME</div>
+                <div class='logo'>YardStick Auto Sales</div>
                 <!-- Toggle button for mobile view -->
                 <button class='navbar-toggler'style='background-color:#F3F4F6;margin:0.5em;' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
                     <span class='navbar-toggler-icon'></span>

@@ -1,6 +1,9 @@
 <?php
 
     define('DBNAME','vehicle_sales');
+    // define('SERVERNAME','localhost');
+    // define('USERNAME','root');
+    // define('PASSWORD','');
     define('SERVERNAME','localhost');
     define('USERNAME','root');
     define('PASSWORD','');
